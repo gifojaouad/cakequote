@@ -30,6 +30,7 @@ class UsersController extends AppController {
 			if(isset($user['id']) && $user['id'] == $id){
 				return true;
 			}else{
+				$this->Session->setFlash('access denied');
 				return false;
 			}
 		}

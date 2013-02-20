@@ -19,6 +19,29 @@ class UsersController extends AppController {
 	}
 	
 	
+	public function isAuthorized($user){
+		if($this->action=='delete'){
+			return false;
+		}
+		if($this->action=='edit'){
+			
+			$id = $this->request->params['pass'][0];
+			
+			if(isset($user['id']) && $user['id'] == $id){
+				return true;
+			}else{
+				return false;
+			}
+		}
+			
+			
+			
+			
+		return parent::isAuthorized($user);
+		
+	}
+	
+	
 	/**
 	 * login and logout
 	 * @author jaouad

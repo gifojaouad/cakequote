@@ -40,6 +40,8 @@
 			<h1><?php echo $this->Html->link('cakequote', '/'); ?></h1>
 		</div>
 		<div id="content">
+			<?php debug($me); ?>
+
 
 			<?php echo $this->Session->flash(); ?>
 

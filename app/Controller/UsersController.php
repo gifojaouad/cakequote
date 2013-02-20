@@ -6,6 +6,46 @@ App::uses('AppController', 'Controller');
  * @property User $User
  */
 class UsersController extends AppController {
+	
+	/**
+	 * beforeFilter
+	 * @author jaouad
+	 */
+	
+	
+	public function beforeFilter(){
+		parent::beforeFilter();
+		$this->Auth->allow('add');
+	}
+	
+	
+	/**
+	 * login and logout
+	 * @author jaouad
+	 */
+	
+	 public function login()
+	 {
+		 if ($this->request->is('post')) {
+		         if ($this->Auth->login()) {
+		             $this->redirect($this->Auth->redirect());
+		         } else {
+		             $this->Session->setFlash(__('Nom d\'user ou mot de passe invalide, réessayer'));
+		         }
+		     }
+	 }
+	 
+	 public function logout()
+	 {
+		 $this->redirect(
+		 $this->Auth->logout()
+	 );
+	 
+	 }
+	
+	
+	
+	
 
 /**
  * index method

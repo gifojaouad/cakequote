@@ -35,16 +35,19 @@ echo $this->fetch('script');
 <div id="container">
 <div id="header">
 <h1><?php echo $this->Html->link('cakequote', '/'); ?></h1>
+<div class="name"><?php echo $me ['username']; ?></div>
+<?php if($me['id']>0): ?>
+<div class="connection2"><?php echo $this->Html->link('logout','/users/logout') ?></div>
+<?php else: ?>
+	<div class="connection"><?php echo $this->Html->link('login','/users/login') ?><br />
+<?php echo $this->Html->link('inscription','/users/add') ?></div>
+<?php endif; ?>
+
+
 </div>
 <div id="content">
 <h2>
-<?php echo $me ['username']; ?>
-<?php if($me['id']>0): ?>
-<div><?php echo $this->Html->link('logout','/users/logout') ?></div>
-<?php else: ?>
-<div><?php echo $this->Html->link('login','/users/login') ?></div>
-<div class="inscription"><?php echo $this->Html->link('inscription','/users/add') ?></div>
-<?php endif; ?>
+
 </h2>
 <?php echo $this->Session->flash(); ?>
 <?php echo $this->fetch('content'); ?>

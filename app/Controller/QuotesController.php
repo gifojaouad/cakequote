@@ -20,6 +20,10 @@ class QuotesController extends AppController {
 		}
 	}
 	
+
+
+	
+	
 	if(in_array($this->action, array('edit','delete'))){
 		//ok for moderators
 		if(isset($user['group_id']) && $user['group_id'] == 2){

@@ -40,7 +40,7 @@ echo $this->fetch('script');
 <div class="connection2"><?php echo $this->Html->link('logout','/users/logout') ?></div>
 <?php else: ?>
 	<div class="connection"><?php echo $this->Html->link('login','/users/login') ?><br />
-<?php echo $this->Html->link('inscription','/users/add') ?></div>
+<?php echo $this->Html->link(__('inscription'), array('controller' => 'users', 'action' => 'add')); ?></div>
 <?php endif; ?>
 
 

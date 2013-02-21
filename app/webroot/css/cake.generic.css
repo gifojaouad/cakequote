@@ -325,11 +325,13 @@ dt {
 	padding-left: 4px;
 	vertical-align: top;
 	width: 10em;
+	color:black;
 }
 dd {
 	margin-left: 10em;
 	margin-top: -2em;
 	vertical-align: top;
+	color:black;
 }
 
 /** Forms **/

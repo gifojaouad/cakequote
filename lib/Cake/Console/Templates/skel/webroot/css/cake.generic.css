@@ -79,6 +79,7 @@ p {
 
 #header{
 	padding: 10px 20px;
+	
 }
 #header h1 {
 	line-height:20px;
@@ -91,6 +92,7 @@ p {
 	background: #003d4c;
 	font-weight: normal;
 	text-decoration: none;
+	
 }
 #header h1 a:hover {
 	color: #fff;
@@ -103,6 +105,8 @@ p {
 	color: #333;
 	padding: 10px 20px 40px 20px;
 	overflow: auto;
+	background:url('../img/logo_bkrnd.png');
+	background-repeat;
 }
 #footer {
 	clear: both;

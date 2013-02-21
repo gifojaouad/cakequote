@@ -39,8 +39,8 @@ echo $this->fetch('script');
 <?php if($me['id']>0): ?>
 <div class="connection2"><?php echo $this->Html->link('logout','/users/logout') ?></div>
 <?php else: ?>
-	<div class="connection"><?php echo $this->Html->link('login','/users/login') ?><br />
-<?php echo $this->Html->link(__('inscription'), array('controller' => 'users', 'action' => 'add')); ?></div>
+<div class="connection3"><?php echo $this->Html->link(__('inscription'), array('controller' => 'users', 'action' => 'add')); ?></div>
+<div class="connection"><?php echo $this->Html->link('login','/users/login') ?></div><br /><br />
 <?php endif; ?>
 
 

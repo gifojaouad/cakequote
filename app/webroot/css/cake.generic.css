@@ -86,11 +86,12 @@ p {
 
 #header{
 	padding: 10px 20px;
+	background:url('http://blog.baillet.eu/public/ciel-bleu-sans-avion-20100417-imgis5346.jpg')  ;
 }
 #header h1 {
 	line-height:20px;
 	font-size:x-large;
-	background: black ;
+	background:url('http://blog.baillet.eu/public/ciel-bleu-sans-avion-20100417-imgis5346.jpg')  ;
 	color: #fff;
 	padding: 0px 30px;
 	text-align:center;
@@ -103,11 +104,30 @@ p {
 	float:right;
 	text-decoration:none;
 	color:white;
+	font-size:large;
+	margin-right:30px;
+	background:#368B24;
+	padding:5px;
+	border-radius:4px;
 }
-#header .connection2 a{
 
+#header .connection3 a{
+	float:right;
 	text-decoration:none;
 	color:white;
+	font-size:large;
+	background:#1484FF;
+	padding:5px;
+	border-radius:4px;
+
+}
+#header .connection2 a{
+	float:right;
+	text-decoration:none;
+	color:white;
+	background:black;
+	padding:4px;
+	border-radius:5px;
 }
 #header .connection a:hover{
 	color:grey;
@@ -115,19 +135,22 @@ p {
 #header .connection2 a:hover{
 	color:grey;
 }
+#header .connection3 a:hover{
+	color:grey;
+}
 #header h1 a {
-	color: #fff;
-	background: black;
+	color:black;
+	
 	font-weight: normal;
 	text-decoration: none;
 }
 #header h1 a:hover {
-	color: #fff;
-	background: black;
+	color: grey;
+
 	text-decoration: underline;
 }
 #header.admin,#header.admin h1, #header.admin h1 a{
-	background-color:black;
+	background:red;
 }
 #content{
 	background: #E2DCDC;
@@ -139,9 +162,9 @@ p {
 
 
 #content h2 {
-	background:black;
+	background:url('http://blog.baillet.eu/public/ciel-bleu-sans-avion-20100417-imgis5346.jpg')  ;
 	border-radius:5px;
-	color: grey;
+	color: black;
 	font-family:'Gill Sans','lucida grande', helvetica, arial, sans-serif;
 	font-size: 190%;
 	text-align:center;
@@ -151,12 +174,18 @@ p {
 
 .name {
 	color: red;
+	background:black;
+	padding:3px;
+	width:170px;
+	text-align:center;
+	border-radius:2px;
 }
 
 #footer {
 	clear: both;
 	padding: 6px 10px;
 	text-align: right;
+	background:url('http://blog.baillet.eu/public/ciel-bleu-sans-avion-20100417-imgis5346.jpg')  ;
 }
 
 /** containers **/
@@ -237,7 +266,7 @@ table td.actions a {
 
 /** Paging **/
 .paging {
-	background:black;
+	background:url('http://blog.baillet.eu/public/ciel-bleu-sans-avion-20100417-imgis5346.jpg')  ;
 	color: #ccc;
 	margin-top: 1em;
 	clear:both;
@@ -284,7 +313,7 @@ dl {
 	line-height: 2em;
 	margin: 0em 0em;
 	width: 60%;
-	color:black;
+background:url('http://blog.baillet.eu/public/ciel-bleu-sans-avion-20100417-imgis5346.jpg')  ;
 }
 dl dd:nth-child(4n+2),
 dl dt:nth-child(4n+1) {
@@ -781,6 +810,9 @@ pre {
 }
 .code-coverage-results span.result-good {
 	color: #0a0;
+}
+p {
+	color:black;
 }
 
 /** Elements **/

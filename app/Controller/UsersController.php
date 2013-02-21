@@ -20,28 +20,29 @@ class UsersController extends AppController {
 	
 	
 	public function isAuthorized($user){
-		if($this->action=='delete'){
-			return false;
-		}
-		if($this->action=='edit'){
-			
-			$id = $this->request->params['pass'][0];
-			
-			if(isset($user['id']) && $user['id'] == $id){
-				return true;
-			}else{
-				$this->Session->setFlash('access denied');
-				return false;
-			}
-		}
-			
-			
-			
-			
-		return parent::isAuthorized($user);
-		
-	}
+
 	
+	if(in_array($this->action,array('login','logout'))){
+	return true;
+
+	}
+
+	if($this->action =='edit'){
+	$user_id = $this->request->params['pass'] [0];
+	$me_id=$this->Auth->user('id');
+	if($me_id == $user_id){
+	return true;
+	}
+	else{
+	$this->Session->setFlash('try harder');
+	}
+	}
+
+	if($this->action=='delete'){
+	return false;
+	}
+	return parent::isAuthorized($user);
+	}
 	
 	/**
 	 * login and logout
@@ -61,8 +62,8 @@ class UsersController extends AppController {
 	 
 	 public function logout()
 	 {
-		 $this->redirect(
-		 $this->Auth->logout()
+		 $this->redirect($this->Auth->logout()
+		 
 	 );
 	 
 	 }

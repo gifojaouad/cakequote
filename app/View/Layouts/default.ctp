@@ -43,6 +43,7 @@ echo $this->fetch('script');
 <div><?php echo $this->Html->link('logout','/users/logout') ?></div>
 <?php else: ?>
 <div><?php echo $this->Html->link('login','/users/login') ?></div>
+<div class="inscription"><?php echo $this->Html->link('inscription','/users/add') ?></div>
 <?php endif; ?>
 </h2>
 <?php echo $this->Session->flash(); ?>

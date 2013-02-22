@@ -24,7 +24,7 @@
 		
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $quote['Quote']['id'])); ?>
-			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $quote['Quote']['id'])); ?>
+			<?php  echo $this->Html->link(__('Edit'), array('action' => 'edit', $quote['Quote']['id'])); ?>
 			<?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $quote['Quote']['id']), null, __('Are you sure you want to delete # %s?', $quote['Quote']['id'])); ?>
 		</td>
 

@@ -25,7 +25,7 @@
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $quote['Quote']['id'])); ?>
 			
-			<?php if($quote['User']['id'] == $me['id'] || $me['Group']['id'] ==1){
+			<?php if($quote['User']['id'] == $me['id'] || $me['Group']['id'] ==1 || $me['Group']['id'] ==2){
 				  echo $this->Html->link(__('Edit'), array('action' => 'edit', $quote['Quote']['id'])); 
 			echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $quote['Quote']['id']), null, __('Are you sure you want to delete # %s?', $quote['Quote']['id']));} ?>
 		</td>
